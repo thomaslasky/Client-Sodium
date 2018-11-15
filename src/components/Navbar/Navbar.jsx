@@ -32,6 +32,7 @@ export default class Example extends React.Component {
       <div>
         <Navbar color="dark" dark expand="md">
           <NavbarToggler onClick={this.toggle} />
+          <NavbarBrand className="d-block d-sm-none" href="/">Sodium Cycle</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
@@ -51,7 +52,7 @@ export default class Example extends React.Component {
               </NavItem>
             </Nav>
           </Collapse>
-          <NavbarBrand href="/">Sodium Cycle</NavbarBrand>
+          <NavbarBrand className="d-none d-sm-block" href="/">Sodium Cycle</NavbarBrand>
         </Navbar>
       </div>
     );
