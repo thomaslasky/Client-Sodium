@@ -29,6 +29,7 @@ export default class Example extends React.Component {
   }
   render() {
     return (
+        /*TODO space content on the bar*/
       <div>
         <Navbar color="dark" dark expand="md">
           <NavbarToggler onClick={this.toggle} />
