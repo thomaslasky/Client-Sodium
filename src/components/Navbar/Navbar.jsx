@@ -32,7 +32,7 @@ export default class Example extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <NavbarBrand className="d-block d-sm-none" href="/">Sodium Cycle</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="mr-auto w-100 justify-content-between pr-5 pl-5" navbar>
+            <Nav className="mr-auto w-100 justify-content-around " navbar>
               <NavItem>
                 <NavLink>Xubaka</NavLink>
               </NavItem>
