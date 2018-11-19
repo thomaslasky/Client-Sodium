@@ -11,12 +11,14 @@ class App extends Component {
 			<div className="App content">
 				<Navbar />
 				<Carousel />
-				<div className="row">
-					<div className="col-sm-6">
-						<CardInfo />
-					</div>
-					<div className="col-sm-6">
-						<CardInfo />
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-md-6 p-0">
+							<CardInfo background=""/>
+						</div>
+						<div className="col-md-6 p-0">
+							<CardInfo background=""/>
+						</div>
 					</div>
 				</div>
 				<Footer />
