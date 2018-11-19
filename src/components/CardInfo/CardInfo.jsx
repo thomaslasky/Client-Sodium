@@ -1,13 +1,28 @@
 import React from 'react';
-import "./CardInfo.css";
+import PropTypes from 'prop-types';
+import cssClasses from  "./CardInfo.module.css";
 
-export default class CardInfo extends React.Component {
-
-	render(){
-		return(
-			<div className="container-card">
-			
-			</div>
-		);
-	}
+export default function CardInfo({ background }){
+	return (
+		<div className={`${cssClasses.card} m-2`} style={{
+			backgroundImage: `url(${background})`
+		}}>
+		
+		</div>
+	);
 }
+CardInfo.propTypes = {
+	background: PropTypes.string.isRequired
+};
+
+
+
+
+//
+// export default class CardInfo extends React.Component {
+//
+// 	render() {
+// 		const { background } = this.props;
+// 		return
+// 	}
+// }
