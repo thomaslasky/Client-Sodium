@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cssClasses from  "./CardInfo.module.css";
+import cssClasses from "./CardInfo.module.css";
 
-export default function CardInfo({ background }){
+export default function CardInfo({background}) {
 	return (
 		<div className={`${cssClasses.card} m-2`} style={{
 			backgroundImage: `url(${background})`
