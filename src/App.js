@@ -11,15 +11,15 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App content">
-				<Navbar />
-				<Carousel />
+				{/*<Navbar />
+				<Carousel />*/}
 				<div className="container-fluid">
-					<div className="row">
+					<div className="row justify-content-around">
 						<div className="col-md-6 p-0">
-							<CardInfo background={`${pic1}`} />
+							<CardInfo background={`${pic1}`} title="Titre TEST" link="https://test.fr" linkName="Exemple"/>
 						</div>
 						<div className="col-md-6 p-0">
-							<CardInfo background={`${pic2}`} />
+							<CardInfo background={`${pic2}`} title="Titre TEST" link="https://test.fr" linkName="Exemple"/>
 						</div>
 					</div>
 				</div>
