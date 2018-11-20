@@ -17,7 +17,7 @@ export default function CardInfo({backgroundCard, titleCard, link, linkName}) {
 					with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
 					publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 				</p>
-				<a className={`${cssClasses.containCarda}`} href={`${link}`} target="_blank">{`${linkName}`} ></a>
+				<a className={`${cssClasses.containCarda}`} href={`${link}`} target="_blank">{`${linkName}`}</a>
 			</div>
 		</div>
 	);
