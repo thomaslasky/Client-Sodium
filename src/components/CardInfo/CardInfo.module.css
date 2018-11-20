@@ -3,10 +3,16 @@
 	background-size: cover;
 }
 
-.containCard h1{
+.containCardh1{
 	padding-top: 40px;
+	text-align: center;
 }
 
-.containCard p {
+.containCardp {
+	text-align: center;
+}
+
+.containCarda {
+	display: block;
 	text-align: center;
 }

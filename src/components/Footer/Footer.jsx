@@ -6,12 +6,12 @@ export default class Footer extends React.Component {
         return(
         <footer className="bg-dark text-light">
             <div className="row m-0 p-2">
-                <ul className="list-unstyled col-sm-6 mb-0 p-0">
+                <ul className="d-block list-unstyled col-sm-6 mb-0 p-0">
                     <li>Xubaka</li>
                     <li>Gallerie</li>
                     <li>Valeurs</li>
                 </ul>
-                <ul className="list-unstyled col-sm-6 mb-0 p-0">
+                <ul className="d-block list-unstyled col-sm-6 mb-0 p-0">
                     <li>Trouver Sodium Cycle</li>
                     <li>Précommande</li>
                     <li>Nous contacter</li>
