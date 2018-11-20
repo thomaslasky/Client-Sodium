@@ -11,7 +11,7 @@ export default () => (
 	<Router>
 		<div>
 			<Layout top={<Navbar />} bottom={<Footer />} container={
-				<Route path="/accueil" exact component={Home} />
+				<Route path="/" exact component={Home} />
 			}
 			/>
 		</div>
