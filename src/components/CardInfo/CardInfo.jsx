@@ -14,15 +14,3 @@ export default function CardInfo({ background }){
 CardInfo.propTypes = {
 	background: PropTypes.string.isRequired
 };
-
-
-
-
-//
-// export default class CardInfo extends React.Component {
-//
-// 	render() {
-// 		const { background } = this.props;
-// 		return
-// 	}
-// }
