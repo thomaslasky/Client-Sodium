@@ -1,7 +1,6 @@
 import React from 'react';
-import InputGroupAddon from "reactstrap/src/InputGroupAddon";
-import Input from "reactstrap/src/Input";
-import InputGroup from "reactstrap/src/InputGroup";
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from 'reactstrap';
+
 
 function ContactPage() {
 	return (
