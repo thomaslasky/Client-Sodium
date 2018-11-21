@@ -15,6 +15,7 @@ export default class Example extends React.Component {
 		super(props);
 		
 		this.toggle = this.toggle.bind(this);
+		this.closeNavbar = this.closeNavbar.bind(this);
 		this.state = {
 			isOpen: false
 		};
@@ -25,6 +26,12 @@ export default class Example extends React.Component {
 			{isOpen: !this.state.isOpen}
 		);
 	}
+
+	closeNavbar() {
+		if (this.state.isOpen == true) {
+		this.toggle();
+		}
+	}
 	
 	render() {
 		return (
@@ -32,11 +39,11 @@ export default class Example extends React.Component {
 			<div>
 				<Navbar color="dark" dark expand="md">
 					<NavbarToggler onClick={this.toggle} />
-					<NavbarBrand className="d-block d-sm-none" href="/">Sodium Cycle</NavbarBrand>
+					<NavbarBrand className="d-block d-md-none" href="/">Sodium Cycle</NavbarBrand>
 					<Collapse isOpen={this.state.isOpen} navbar>
 						<Nav className="mr-auto w-100 justify-content-around " navbar>
 							<NavItem>
-								<Link to="/"><NavLink>Xubaka</NavLink></Link>
+								<Link to="/" onClick={this.closeNavbar}><NavLink>Xubaka</NavLink></Link>
 							</NavItem>
 							<NavItem>
 								<NavLink>Gallerie</NavLink>
@@ -51,11 +58,11 @@ export default class Example extends React.Component {
 								<NavLink>Précommande</NavLink>
 							</NavItem>
 							<NavItem>
-								<Link to="/contact"><NavLink>Contact</NavLink></Link>
+								<Link to="/contact" onClick={this.closeNavbar}><NavLink>Contact</NavLink></Link>
 							</NavItem>
 						</Nav>
 					</Collapse>
-					<NavbarBrand className="d-none d-sm-block" href="/">Sodium Cycle</NavbarBrand>
+					<NavbarBrand className="d-none d-md-block" href="/">Sodium Cycle</NavbarBrand>
 				</Navbar>
 			</div>
 		);
