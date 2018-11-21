@@ -43,7 +43,7 @@ export default class Example extends React.Component {
 					<Collapse isOpen={this.state.isOpen} navbar>
 						<Nav className="mr-auto w-100 justify-content-around " navbar>
 							<NavItem>
-								<Link to="/" onClick={this.closeNavbar}><NavLink>Xubaka</NavLink></Link>
+								<Link to="/" onClick={this.closeNavbar} className="nav-link">Xubaka</Link>
 							</NavItem>
 							<NavItem>
 								<NavLink>Gallerie</NavLink>
@@ -58,7 +58,7 @@ export default class Example extends React.Component {
 								<NavLink>Précommande</NavLink>
 							</NavItem>
 							<NavItem>
-								<Link to="/contact" onClick={this.closeNavbar}><NavLink>Contact</NavLink></Link>
+								<Link to="/contact" onClick={this.closeNavbar} className="nav-link">Contact</Link>
 							</NavItem>
 						</Nav>
 					</Collapse>
