@@ -8,6 +8,7 @@ import {
 	NavItem,
 	NavLink,
 } from 'reactstrap';
+import {Link} from "react-router-dom";
 
 export default class Example extends React.Component {
 	constructor(props) {
@@ -35,7 +36,7 @@ export default class Example extends React.Component {
 					<Collapse isOpen={this.state.isOpen} navbar>
 						<Nav className="mr-auto w-100 justify-content-around " navbar>
 							<NavItem>
-								<NavLink>Xubaka</NavLink>
+								<Link to="/"><NavLink>Xubaka</NavLink></Link>
 							</NavItem>
 							<NavItem>
 								<NavLink>Gallerie</NavLink>
@@ -50,7 +51,7 @@ export default class Example extends React.Component {
 								<NavLink>Précommande</NavLink>
 							</NavItem>
 							<NavItem>
-								<NavLink>Contact</NavLink>
+								<Link to="/contact"><NavLink>Contact</NavLink></Link>
 							</NavItem>
 						</Nav>
 					</Collapse>
