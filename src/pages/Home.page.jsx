@@ -1,6 +1,7 @@
 import React from 'react';
 import CardInfo from '../components/CardInfo/CardInfo';
-import pic1 from "../assets/Images/Background/4.png";
+import pic1 from "../assets/Images/Background/3.png";
+import pic2 from "../assets/Images/Background/2.jpg";
 import Carousel from "../components/Carousel/Carousel";
 
 function IndexPage() {
@@ -19,7 +20,7 @@ function IndexPage() {
 						/>
 					</div>
 					<div className="col-md-6 p-0">
-						<CardInfo backgroundCard={`${pic1}`}
+						<CardInfo backgroundCard={`${pic2}`}
 						          titleCard="Titre TEST"
 						          link="https://test.fr"
 						          linkName="Exemple"
