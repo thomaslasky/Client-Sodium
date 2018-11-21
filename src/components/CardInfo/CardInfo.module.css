@@ -1,6 +1,8 @@
 .card {
 	height: 520px;
 	background-size: cover;
+	background-repeat:no-repeat;
+	background-position:center;
 }
 
 .containCardh1{

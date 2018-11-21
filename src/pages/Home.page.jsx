@@ -1,6 +1,6 @@
 import React from 'react';
 import CardInfo from '../components/CardInfo/CardInfo';
-import pic1 from "../assets/Images/Background/3.png";
+import pic1 from "../assets/Images/Background/1.png";
 import pic2 from "../assets/Images/Background/2.jpg";
 import Carousel from "../components/Carousel/Carousel";
 
