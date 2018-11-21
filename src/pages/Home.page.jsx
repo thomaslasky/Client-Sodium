@@ -6,7 +6,7 @@ import Carousel from "../components/Carousel/Carousel";
 function IndexPage() {
 	return (
 		<div>
-			<div className="p-0">
+			<div className="p-0 w-100 col-sm-12 offset-md-1 col-md-10 mt-2">
 				<Carousel />
 			</div>
 			<div className="container-fluid">

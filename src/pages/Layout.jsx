@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Container, Row, Col} from 'reactstrap';
+import style from "./Layout.module.css";
 
 const Layout = ({top, bottom, container}) => {
 	return (
-		<div className="container-fluid p-0">
-			<Row className="mr-0 ml-0">
-				<Col className="pl-0 pr-0">{top}</Col>
+		<div className={`container-fluid p-0 ${style.masterContainer}`}>
+			<Row className="m-0">
+				<Col className="p-0">{top}</Col>
 			</Row>
-			<Row className="mr-0 ml-0">
-				<Col className="pl-0 pr-0">{container}</Col>
+			<Row className="m-0">
+				<Col className="p-0">{container}</Col>
 			</Row>
-			<Row className="mr-0 ml-0">
-				<Col className="pl-0 pr-0">{bottom}</Col>
+			<Row className="m-0">
+				<Col className="p-0">{bottom}</Col>
 			</Row>
 		</div>
 	);
