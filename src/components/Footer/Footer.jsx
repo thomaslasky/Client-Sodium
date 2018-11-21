@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import style from './Footer.module.css';
 
 export default class Footer extends React.Component {
 
@@ -7,14 +9,14 @@ export default class Footer extends React.Component {
         <footer className="bg-dark text-light">
             <div className="row m-0 p-2">
                 <ul className="list-unstyled col-sm-6 mb-0 text-center">
-                    <li className="">Xubaka</li>
+                    <li><Link to='/' className={`${style.noStyle}`}>Xubaka</Link></li>
                     <li>Gallerie</li>
                     <li>Valeurs</li>
                 </ul>
                 <ul className="list-unstyled col-sm-6 mb-0 text-center">
                     <li>Trouver Sodium Cycle</li>
                     <li>Précommande</li>
-                    <li>Nous contacter</li>
+                    <li><Link to='/contact' className={`${style.noStyle}`}>Nous contacter</Link></li>
                 </ul>
             </div>
         </footer>
