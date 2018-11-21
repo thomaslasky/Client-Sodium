@@ -11,8 +11,8 @@ import cssClasses from "./Contact.module.css";
 
 function ContactPage() {
 	return <div className="col-md-6 m-auto">
-		<div>
-			<h1>Nous contacter</h1>
+		<div className="mt-3">
+			<h1 className="text-center">Nous contacter</h1>
 		</div>
 		<Form className="mb-2">
 			<FormGroup>
