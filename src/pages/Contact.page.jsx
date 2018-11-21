@@ -35,7 +35,7 @@ function ContactPage() {
 			</FormGroup>
 			<FormGroup>
 				<InputGroupAddon addonType="prepend" className={cssClasses.urMessage}>Votre Message</InputGroupAddon>
-				<Input type="textarea" id="message" rows="8" />
+				<Input type="textarea" id="message" rows="10" />
 			</FormGroup>
 			<Button className="m-auto d-block">Submit</Button>
 		</Form>
