@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home.page";
 import Contact from "./pages/Contact.page";
+import Who from "./pages/Qui.page";
 
 export default () => (
 	<Router>
@@ -15,6 +16,7 @@ export default () => (
 				<div>
 					<Route path="/" exact component={Home} />
 					<Route path="/contact" exact component={Contact} />
+					<Route path="/who-are-we" exact component={Who} />
 				</div>
 			}
 			/>

@@ -10,7 +10,6 @@ function IndexPage() {
 		<div>
 			<div className="p-0 w-100 col-sm-12 offset-md-1 col-md-10 mt-2">
 				<Carousel />
-				<CardPerso />
 			</div>
 			<div className="container-fluid">
 				<div className="row justify-content-around">
