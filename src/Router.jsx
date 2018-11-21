@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 
 import Layout from "./pages/Layout";
 import Home from "./pages/Home.page";
+import Contact from "./pages/Contact.page";
 
 export default () => (
 	<Router>
@@ -13,7 +14,7 @@ export default () => (
 			<Layout top={<Navbar />} bottom={<Footer />} container={
 				<div>
 					<Route path="/" exact component={Home} />
-					<Route path="/contact" exact component={Home} />
+					<Route path="/contact" exact component={Contact} />
 				</div>
 			}
 			/>
