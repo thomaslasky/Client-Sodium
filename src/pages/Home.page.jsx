@@ -3,12 +3,14 @@ import CardInfo from '../components/CardInfo/CardInfo';
 import pic1 from "../assets/Images/Background/1.png";
 import pic2 from "../assets/Images/Background/2.jpg";
 import Carousel from "../components/Carousel/Carousel";
+import CardPerso from "../components/CardPerso/CardPerso";
 
 function IndexPage() {
 	return (
 		<div>
 			<div className="p-0 w-100 col-sm-12 offset-md-1 col-md-10 mt-2">
 				<Carousel />
+				<CardPerso />
 			</div>
 			<div className="container-fluid">
 				<div className="row justify-content-around">

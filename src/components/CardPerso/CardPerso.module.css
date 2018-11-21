@@ -1,0 +1,16 @@
+
+.imgPerso{
+    width : 100%;
+    max-width: 100%;
+}
+
+
+@media (min-width: 576px) { 
+    .imgPerso{
+        width: 300px;
+    }
+    .cardPerso{
+        height: 300px;
+    }
+    
+}
