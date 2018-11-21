@@ -24,18 +24,18 @@ function ContactPage() {
 			<FormGroup>
 				<InputGroup>
 					<InputGroupAddon addonType="prepend">Téléphone</InputGroupAddon>
-					<Input placeholder="téléphone" type="tel" />
+					<Input placeholder="téléphone (facultatif)" type="tel" />
 				</InputGroup>
 			</FormGroup>
 			<FormGroup>
 				<InputGroup>
-					<InputGroupAddon addonType="prepend">Sujet</InputGroupAddon>
-					<Input placeholder="sujet" type="text" />
+					<InputGroupAddon addonType="prepend">Objet</InputGroupAddon>
+					<Input placeholder="objet" type="text" />
 				</InputGroup>
 			</FormGroup>
 			<FormGroup>
 				<InputGroupAddon addonType="prepend" className={cssClasses.urMessage}>Votre Message</InputGroupAddon>
-				<Input type="textarea" id="message" />
+				<Input type="textarea" id="message" rows="8" />
 			</FormGroup>
 			<Button className="m-auto d-block">Submit</Button>
 		</Form>
