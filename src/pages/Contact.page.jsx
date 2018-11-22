@@ -37,7 +37,21 @@ function ContactPage() {
 				<InputGroupAddon addonType="prepend" className={cssClasses.urMessage}>Votre Message</InputGroupAddon>
 				<Input type="textarea" id="message" rows="10" />
 			</FormGroup>
-			<Button className="m-auto d-block">Submit</Button>
+			<Button className="m-auto d-block" onClick={
+				() => {
+					const axios = require('axios');
+					axios.post('/user', {
+						     firstName: 'Fred',
+						     lastName : 'Flintstone'
+					     })
+					     .then(function (response) {
+						     console.log(response);
+					     })
+					     .catch(function (error) {
+						     console.log(error);
+					     });
+				}
+			}>Submit</Button>
 		</Form>
 	</div>;
 }
