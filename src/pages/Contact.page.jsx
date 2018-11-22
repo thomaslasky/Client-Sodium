@@ -8,13 +8,15 @@ import {
 	InputGroupAddon,
 } from 'reactstrap';
 import cssClasses from "./Contact.module.css";
+import axios from "axios";
 
 function ContactPage() {
+	
 	return <div className="col-md-6 m-auto">
 		<div className="mt-3">
 			<h1 className="text-center">Nous contacter</h1>
 		</div>
-		<Form className="mb-2">
+		<Form className="mb-2" id="formulaireContact">
 			<FormGroup>
 				<InputGroup>
 					<InputGroupAddon addonType="prepend">@</InputGroupAddon>
@@ -39,10 +41,9 @@ function ContactPage() {
 			</FormGroup>
 			<Button className="m-auto d-block" onClick={
 				() => {
-					const axios = require('axios');
-					axios.post('/user', {
-						     firstName: 'Fred',
-						     lastName : 'Flintstone'
+					axios.post('', {
+						     firstname: 'thomas',
+						     lastname : 'tartas',
 					     })
 					     .then(function (response) {
 						     console.log(response);
