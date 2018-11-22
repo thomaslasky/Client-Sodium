@@ -1,16 +1,14 @@
-
-.imgPerso{
-    width : 100%;
-    max-width: 100%;
+/* .imgPerso {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
-
-@media (min-width: 576px) { 
-    .imgPerso{
-        width: 300px;
-    }
-    .cardPerso{
-        height: 300px;
-    }
-    
-}
+@media (min-width: 576px) {
+  .imgPerso {
+    width: 250px;
+  }
+  .cardPerso {
+    height: 250px;
+  }
+} */
