@@ -18,7 +18,7 @@ function ContactPage() {
 			<FormGroup>
 				<InputGroup>
 					<InputGroupAddon addonType="prepend">@</InputGroupAddon>
-					<Input placeholder="email" type="email" />
+					<Input placeholder="email" type="email" required/>
 				</InputGroup>
 			</FormGroup>
 			<FormGroup>
@@ -30,12 +30,12 @@ function ContactPage() {
 			<FormGroup>
 				<InputGroup>
 					<InputGroupAddon addonType="prepend">Objet</InputGroupAddon>
-					<Input placeholder="objet" type="text" />
+					<Input placeholder="objet" type="text" required/>
 				</InputGroup>
 			</FormGroup>
 			<FormGroup>
 				<InputGroupAddon addonType="prepend" className={cssClasses.urMessage}>Votre Message</InputGroupAddon>
-				<Input type="textarea" id="message" rows="8" />
+				<Input type="textarea" id="message" rows="8" required placeholder="Votre message"/>
 			</FormGroup>
 			<Button className="m-auto d-block">Submit</Button>
 		</Form>
