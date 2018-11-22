@@ -9,17 +9,17 @@ import {
 } from "reactstrap";
 import style from "./CardDeck.module.css";
 
-const Example = props => {
+const Deck = props => {
   return (
-    <CardDeck className="mx-auto">
-      <Card className={`${style.cardPerso} mr-sm-2 mr-lg-5`}>
+    <CardDeck>
+      <Card className={`${style.cardPerso}`}>
         <CardImg top width="100%" src={props.pix1} alt="Card image cap" />
         <CardBody>
           <CardTitle>{props.title1}</CardTitle>
           <CardText>{props.text1}</CardText>
         </CardBody>
       </Card>
-      <Card className={`${style.cardPerso} ml-sm-2 ml-lg-5`}>
+      <Card className={`${style.cardPerso}`}>
         <CardImg top width="100%" src={props.pix2} alt="Card image cap" />
         <CardBody>
           <CardTitle>{props.title2}</CardTitle>
@@ -30,4 +30,4 @@ const Example = props => {
   );
 };
 
-export default Example;
+export default Deck;
