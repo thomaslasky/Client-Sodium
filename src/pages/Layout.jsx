@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Container, Row, Col} from 'reactstrap';
+import {Row, Col} from 'reactstrap';
 import style from "./Layout.module.css";
 
 const Layout = ({top, bottom, container}) => {
