@@ -1,25 +1,37 @@
 import React from "react";
-import CardOptions from "../components/CardOptions/CardOptions";
+import CardOptionForm from "../components/CardOptionForm/CardOptionForm";
+import CardCustomPartDescription from "../components/CardCustomPartDescription/CardCustomPartDescription";
 
 // à récupérer en bdd
-const options = [
-  {
-    id: 1,
-    name: "bleu"
-  },
-  {
-    id: 2,
-    name: "rouge"
-  }
-];
+const customPart = {
+  id: 1,
+  name: "Poignées",
+  options: [
+    {
+      id: 1,
+      name: "bleu",
+      description: "Super poignées bleues"
+    },
+    {
+      id: 2,
+      name: "rouge",
+      description: "Super poignées rouges"
+    }
+  ]
+};
 
-function QuiPage() {
+function Preorder() {
   return (
     <div>
-      <h1>wesh</h1>
-      <CardOptions title="Poignées" options={options} />
+      <div>
+        <h1>wesh</h1>
+        <CardOptionForm title={customPart.name} options={customPart.options} />
+      </div>
+      <div>
+        <CardCustomPartDescription customPart={customPart} />
+      </div>
     </div>
   );
 }
 
-export default QuiPage;
+export default Preorder;

@@ -9,7 +9,7 @@ import {
   Button
 } from "reactstrap";
 
-const CardOptions = props => {
+const CardOptionForm = props => {
   return (
     <div>
       <Card>
@@ -34,4 +34,4 @@ const CardOptions = props => {
   );
 };
 
-export default CardOptions;
+export default CardOptionForm;
