@@ -8,6 +8,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home.page";
 import Contact from "./pages/Contact.page";
 import Who from "./pages/Qui.page";
+import Preorder from "./pages/Preorder.page";
 import Page404 from "./pages/Page404.page";
 
 export default () => (
@@ -21,6 +22,7 @@ export default () => (
             <Route path="/" exact component={Home} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/who-are-we" exact component={Who} />
+            <Route path="/preorder" exact component={Preorder} />
             <Route path="*" component={Page404} />
           </Switch>
         }
