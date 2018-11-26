@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {
 	Button,
 	Form,
@@ -6,11 +7,20 @@ import {
 	Input,
 	InputGroup,
 	InputGroupAddon,
+	Alert,
 } from 'reactstrap';
 import cssClasses from "./Contact.module.css";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactPage() {
+	
+	function alertResponse(type, message) {
+		return <Alert color={type}>
+			{message}
+		</Alert>;
+	}
 	
 	function handleContactSubmit(credentials) {
 		
@@ -20,16 +30,19 @@ export default function ContactPage() {
 		contact.append('message', credentials.message);
 		contact.append('telephone', credentials.telephone);
 		
-		return (
-			axios.post("http://cours/TestReact/mail.php", contact, {
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded'
-				}
-			})
-		);
+		axios.post("http://cours/TestReact/mail.php", contact)
+		     .then(function (response) {
+			
+			     let dataResponse = response.data["Response"];
+			     
+			     
+		     });
 	}
 	
-	return <div className="col-md-6 m-auto">
+	return <div className="col-md-6 m-auto" id="contain-contact">
+		<div id="alert">
+		
+		</div>
 		<div className="mt-3">
 			<h1 className="text-center">Nous contacter</h1>
 		</div>
