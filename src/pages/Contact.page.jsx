@@ -33,17 +33,15 @@ export default function ContactPage() {
 		<div className="mt-3">
 			<h1 className="text-center">Nous contacter</h1>
 		</div>
-		<Form className="mb-2"
-		      onSubmit={e => {
-			      e.preventDefault();
-			      const email = e.target.elements.email.value;
-			      const telephone = e.target.elements.tel.value;
-			      const objet = e.target.elements.objet.value;
-			      const message = e.target.elements.message.value;
+		<Form className="mb-2" onSubmit={e => {
+			e.preventDefault();
+			const email = e.target.elements.email.value;
+			const telephone = e.target.elements.tel.value;
+			const objet = e.target.elements.objet.value;
+			const message = e.target.elements.message.value;
 			
-			      handleContactSubmit({email, telephone, objet, message});
-		      }}
-		>
+			handleContactSubmit({email, telephone, objet, message});
+		}}>
 			<FormGroup>
 				<InputGroup>
 					<InputGroupAddon addonType="prepend">@</InputGroupAddon>
