@@ -11,68 +11,89 @@ import {
 } from "reactstrap";
 import style from "./CardDeckCustomPart.module.css";
 
-const CardDeckCustomPart = props => {
-  return (
-    <CardGroup className={`w-100 ${style.groupe}`}>
-      <Card className="col-md-2 mb-0">
-        <CardBody>
-          <CardTitle>{props.customPart.name}</CardTitle>
-          {props.customPart.options.map(option => (
-            <div>
-              <label>
-                <input
-                  type="radio"
-                  value={option.id}
-                  name={props.customPart.name}
-                  className="mr-1"
-                />
-                {option.name} {option.prix ? "(+ " + option.prix + ")" : null}
-              </label>
-            </div>
-          ))}
-        </CardBody>
-      </Card>
-      <Card className="col-md-7 mb-0 p-0 mr-2 d-flex flex-row">
-        <CardImg
-          left
-          src={props.customPart.image}
-          alt={props.customPart.name}
-          className={`${style.imgCustomPart}`}
-        />
-        <div>
+export default class CardDeckCustomPart extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: "",
+      selectedGlobalImage: ""
+    };
+  }
+
+  handleOptionChange = event => {
+    this.setState({
+      selectedOption: event.target.value,
+      selectedGlobalImage: event.target.dataset.img
+    });
+  };
+
+  render() {
+    return (
+      <CardGroup className={`w-100 ${style.groupe}`}>
+        <Card className="col-md-2 mb-0">
           <CardBody>
-            <CardTitle>{props.customPart.name}</CardTitle>
-
-            <CardText>
-              <ul>
-                {props.customPart.options.map(option => (
-                  <li key={option.id}>{option.description}</li>
-                ))}
-              </ul>
-            </CardText>
+            <CardTitle>{this.props.customPart.name}</CardTitle>
+            <ul className="list-unstyled">
+              {this.props.customPart.options.map(option => (
+                <li key={option.id}>
+                  <label>
+                    <input
+                      type="radio"
+                      value={option.id}
+                      name={this.props.customPart.name}
+                      data-img={option.imageGlobal}
+                      onChange={this.handleOptionChange}
+                      className="mr-1"
+                    />
+                    {option.name}{" "}
+                    {option.prix ? "(+ " + option.prix + ")" : null}
+                  </label>
+                </li>
+              ))}
+            </ul>
           </CardBody>
-          <div className={`d-flex flex-row ${style.miniContainer}`}>
-            {props.customPart.options.map(option =>
-              option.imageOption ? (
-                <img
-                  className={`${style.imgOption}`}
-                  src={option.imageOption}
-                />
-              ) : null
-            )}
+        </Card>
+        <Card className="col-md-7 mb-0 p-0 d-flex flex-row">
+          <CardImg
+            src={this.props.customPart.image}
+            alt={this.props.customPart.name}
+            className={`${style.imgCustomPart}`}
+          />
+          <div>
+            <CardBody>
+              <CardTitle>{this.props.customPart.name}</CardTitle>
+              <div>
+                <ul>
+                  {this.props.customPart.options.map(option => (
+                    <li key={option.id}>{option.description}</li>
+                  ))}
+                </ul>
+              </div>
+            </CardBody>
+            <div className={`d-flex flex-row ${style.miniContainer}`}>
+              {this.props.customPart.options.map(option =>
+                option.imageOption ? (
+                  <img
+                    className={`${style.imgOption}`}
+                    src={option.imageOption}
+                    key={option.id}
+                  />
+                ) : null
+              )}
+            </div>
           </div>
-        </div>
-      </Card>
-      <Card className="col-md-3 mb-0 p-0 d-flex justify-content-center">
-        <CardImg
-          top
-          width="100%"
-          src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-          alt="Card image cap"
-        />
-      </Card>
-    </CardGroup>
-  );
-};
-
-export default CardDeckCustomPart;
+        </Card>
+        {this.state.selectedGlobalImage ? (
+          <Card className="col-md-3 mb-0 ml-2 p-0 d-flex justify-content-center">
+            <CardImg
+              top
+              width="100%"
+              src={this.state.selectedGlobalImage}
+              alt="Card image cap"
+            />
+          </Card>
+        ) : null}
+      </CardGroup>
+    );
+  }
+}

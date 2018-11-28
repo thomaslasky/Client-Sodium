@@ -42,12 +42,12 @@ const customParts = [
     name: "Guidon",
     options: [
       {
-        id: 1,
+        id: 4,
         name: "Haut",
         description: "Super guidon haut"
       },
       {
-        id: 2,
+        id: 5,
         name: "Bas",
         description: "Super guidon bas"
       }

@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-export default class Example extends React.Component {
+export default class MainNavbar extends React.Component {
   constructor(props) {
     super(props);
 
