@@ -1,22 +1,39 @@
 import React from "react";
-import CardOptionForm from "../components/CardOptionForm/CardOptionForm";
-import CardCustomPartDescription from "../components/CardCustomPartDescription/CardCustomPartDescription";
 import CardDeckCustomPart from "../components/CardDeckCustomPart/CardDeckCustomPart";
 // à récupérer en bdd
+import ImagePart1 from "../assets/Images/Part/bp.png";
+import ImageOption11 from "../assets/Images/Part/b.png";
+import ImageGlobalOption11 from "../assets/Images/Part/bp.png";
+import ImageOption12 from "../assets/Images/Part/g.png";
+import ImageGlobalOption12 from "../assets/Images/Part/gp.png";
+
 const customParts = [
   {
     id: 1,
-    name: "Poignées",
+    name: "Porte-bagage",
+    image: ImagePart1,
     options: [
       {
         id: 1,
-        name: "bleu",
-        description: "Super poignées bleues"
+        name: "sans",
+        description: "pas de porte bagage",
+        prix: null
       },
       {
         id: 2,
-        name: "rouge",
-        description: "Super poignées rouges"
+        name: "bac",
+        description: "porte bagage fermé",
+        prix: "50 €",
+        imageOption: ImageOption11,
+        imageGlobal: ImageGlobalOption11
+      },
+      {
+        id: 3,
+        name: "classique",
+        description: "porte bagage en métal",
+        prix: "30 €",
+        imageOption: ImageOption12,
+        imageGlobal: ImageGlobalOption12
       }
     ]
   },
@@ -42,7 +59,7 @@ function Preorder() {
   return (
     <div className="container-fluid mt-2">
       {customParts.map(customPart => (
-        <div className="row mb-2">
+        <div className="row mb-2" key={customPart.id}>
           <CardDeckCustomPart customPart={customPart} />
         </div>
       ))}

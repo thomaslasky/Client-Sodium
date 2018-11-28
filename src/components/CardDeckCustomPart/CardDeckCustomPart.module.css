@@ -1,4 +1,21 @@
 .imgCustomPart {
   min-width: 150px;
   max-width: 250px;
+  border-radius: 50%;
+}
+
+.imgOption {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.miniContainer {
+  height: 80px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.groupe {
+  max-height: 300px;
 }
