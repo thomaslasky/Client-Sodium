@@ -6,6 +6,9 @@ import ImageOption11 from "../assets/Images/Part/b.png";
 import ImageGlobalOption11 from "../assets/Images/Part/bp.png";
 import ImageOption12 from "../assets/Images/Part/g.png";
 import ImageGlobalOption12 from "../assets/Images/Part/gp.png";
+import ImagePart2 from "../assets/Images/Part/surf.jpg";
+import ImageOption21 from "../assets/Images/Part/surfmini.png";
+import ImageGlobalOption21 from "../assets/Images/Part/surfglobal.png";
 
 const customParts = [
   {
@@ -39,17 +42,20 @@ const customParts = [
   },
   {
     id: 2,
-    name: "Guidon",
+    name: "Surf rack",
+    image: ImagePart2,
     options: [
       {
         id: 4,
-        name: "Haut",
-        description: "Super guidon haut"
+        name: "Sans",
+        description: "pas de rack"
       },
       {
         id: 5,
-        name: "Bas",
-        description: "Super guidon bas"
+        name: "Surf rack",
+        description: "Super surf rack",
+        imageOption: ImageOption21,
+        imageGlobal: ImageGlobalOption21
       }
     ]
   }

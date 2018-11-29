@@ -84,7 +84,7 @@ export default class CardDeckCustomPart extends React.Component {
           </div>
         </Card>
         {this.state.selectedGlobalImage ? (
-          <Card className="col-md-3 mb-0 ml-2 p-0 d-flex justify-content-center">
+          <Card className="col-md-3 mb-0 p-0 d-flex justify-content-center">
             <CardImg
               top
               width="100%"
