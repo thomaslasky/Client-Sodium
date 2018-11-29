@@ -30,7 +30,7 @@ export default class CardDeckCustomPart extends React.Component {
   render() {
     return (
       <CardGroup className={`w-100 ${style.groupe}`}>
-        <Card className="col-md-2 mb-0">
+        <Card className="col-md-2 col-sm-12 mb-0">
           <CardBody>
             <CardTitle>{this.props.customPart.name}</CardTitle>
             <ul className="list-unstyled">
@@ -53,7 +53,7 @@ export default class CardDeckCustomPart extends React.Component {
             </ul>
           </CardBody>
         </Card>
-        <Card className="col-md-7 mb-0 p-0 d-flex flex-row">
+        <Card className="col-md-7 col-sm-12 mb-0 p-0 d-flex flex-row">
           <CardImg
             src={this.props.customPart.image}
             alt={this.props.customPart.name}
@@ -84,7 +84,7 @@ export default class CardDeckCustomPart extends React.Component {
           </div>
         </Card>
         {this.state.selectedGlobalImage ? (
-          <Card className="col-md-3 mb-0 p-0 d-flex justify-content-center">
+          <Card className="col-lg-3 mb-0 p-0 d-flex justify-content-center">
             <CardImg
               top
               width="100%"

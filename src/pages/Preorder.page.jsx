@@ -1,5 +1,8 @@
 import React from "react";
 import CardDeckCustomPart from "../components/CardDeckCustomPart/CardDeckCustomPart";
+import PreorderPersonalInfoForm from "../components/PreorderPersonalInfoForm/PreorderPersonalInfoForm";
+import { Form, Button } from "reactstrap";
+import axios from "axios";
 // à récupérer en bdd
 import ImagePart1 from "../assets/Images/Part/bp.png";
 import ImageOption11 from "../assets/Images/Part/b.png";
@@ -61,14 +64,53 @@ const customParts = [
   }
 ];
 
+function handlePreorderSubmit(credentials) {
+  let preorder = new URLSearchParams();
+  preorder.append("prenom", credentials.prenom);
+  preorder.append("nom", credentials.nom);
+  preorder.append("codePostal", credentials.codePostal);
+  preorder.append("email", credentials.email);
+  preorder.append("message", credentials.message);
+  preorder.append("telephone", credentials.telephone);
+
+  axios.post("http://localhost:8000/preorder", preorder);
+}
+
 function Preorder() {
   return (
     <div className="container-fluid mt-2">
-      {customParts.map(customPart => (
-        <div className="row mb-2" key={customPart.id}>
-          <CardDeckCustomPart customPart={customPart} />
+      <Form
+        onSubmit={e => {
+          e.preventDefault();
+          const prenom = e.target.elements.prenom.value;
+          const nom = e.target.elements.nom.value;
+          const codePostal = e.target.elements.codePostal.value;
+          const email = e.target.elements.email.value;
+          const telephone = e.target.elements.telephone.value;
+          const message = e.target.elements.message.value;
+
+          handlePreorderSubmit({
+            prenom,
+            nom,
+            codePostal,
+            email,
+            telephone,
+            message
+          });
+        }}
+      >
+        {customParts.map(customPart => (
+          <div className="row mb-2" key={customPart.id}>
+            <CardDeckCustomPart customPart={customPart} />
+          </div>
+        ))}
+        <div className="row">
+          <div className="offset-md-3 col-md-6">
+            <PreorderPersonalInfoForm />
+          </div>
         </div>
-      ))}
+        <Button className="m-auto d-block">Submit</Button>
+      </Form>
     </div>
   );
 }
