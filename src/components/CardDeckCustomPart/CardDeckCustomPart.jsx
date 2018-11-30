@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Card,
-  Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  CardGroup,
-  CardFooter,
-  CardBody
-} from "reactstrap";
+import { Card, CardImg, CardTitle, CardGroup, CardBody } from "reactstrap";
 import style from "./CardDeckCustomPart.module.css";
 
 export default class CardDeckCustomPart extends React.Component {
@@ -39,7 +30,7 @@ export default class CardDeckCustomPart extends React.Component {
                   <label>
                     <input
                       type="radio"
-                      value={option.id}
+                      value={option.name}
                       name={this.props.customPart.name}
                       data-img={option.imageGlobal}
                       onChange={this.handleOptionChange}
