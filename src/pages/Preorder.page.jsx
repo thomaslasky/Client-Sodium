@@ -74,10 +74,17 @@ export default class Preorder extends React.Component {
     let filteredFormInputs = formInputs.filter(
       input => !(input.type === "radio" && input.checked === false)
     );
+
+    // let selectedOptions = formInputs.filter(
+    //   input => (input.type === "radio" && input.checked === true)
+    // )
+    // selectedOptions.map((selectedOption => selectedOption. ))
+
     let inputsToString = filteredFormInputs.map(inputObject =>
       JSON.stringify(inputObject)
     );
-    preorder.append("inputs", inputsToString);
+    let inputsWithSeparator = inputsToString.join("|");
+    preorder.append("inputs", inputsWithSeparator);
 
     axios.post("http://localhost:8000/preorder", preorder);
   }
