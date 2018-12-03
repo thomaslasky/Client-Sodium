@@ -10,7 +10,10 @@ import {
 } from 'reactstrap';
 import cssClasses from "./Contact.module.css";
 import axios from "axios";
-import {ToastContainer, toast} from 'react-toastify';
+import {
+    ToastContainer,
+    toast
+} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactPage() {
@@ -25,7 +28,6 @@ export default function ContactPage() {
         
         axios.post("http://cours/TestReact/mail.php", contact)
              .then(function (response) {
-            
                  if (response.data["Response"] === true) {
                      return toast.success('Email envoyé !', {
                          position       : "bottom-right",
@@ -65,19 +67,19 @@ export default function ContactPage() {
             <FormGroup>
                 <InputGroup>
                     <InputGroupAddon addonType="prepend">@</InputGroupAddon>
-                    <Input placeholder="email" type="email" name="email" />
+                    <Input placeholder="email" type="email" name="email" required />
                 </InputGroup>
             </FormGroup>
             <FormGroup>
                 <InputGroup>
                     <InputGroupAddon addonType="prepend">Téléphone</InputGroupAddon>
-                    <Input placeholder="téléphone (facultatif)" type="tel" name="tel" />
+                    <Input placeholder="téléphone (facultatif)" type="tel" name="tel" required />
                 </InputGroup>
             </FormGroup>
             <FormGroup>
                 <InputGroup>
                     <InputGroupAddon addonType="prepend">Objet</InputGroupAddon>
-                    <Input placeholder="objet" type="text" name="objet" />
+                    <Input placeholder="objet" type="text" name="objet" required />
                 </InputGroup>
             </FormGroup>
             <FormGroup>
