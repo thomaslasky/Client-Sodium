@@ -1,17 +1,17 @@
 import React from "react";
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
 } from "reactstrap";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import {translate} from "react-translate";
 
-export default class MainNavbar extends React.Component {
-
+class MainNavbar extends React.Component {
+    
     constructor(props) {
         super(props);
         
@@ -46,22 +46,28 @@ export default class MainNavbar extends React.Component {
                                 <Link to="/" onClick={this.closeNavbar} className="nav-link">Xubaka</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/Gallery" onClick={this.closeNavbar} className="nav-link">Galerie</Link>
+                                <Link to="/Gallery" onClick={this.closeNavbar}
+                                      className="nav-link">{this.props.t("TITLE1")}</Link>
                             </NavItem>
                             <NavItem>
-                               <Link to="/technology" onClick={this.closeNavbar} className="nav-link">Technologie</Link>
+                                <Link to="/technology" onClick={this.closeNavbar}
+                                      className="nav-link">{this.props.t("TITLE2")}</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/who-are-we" onClick={this.closeNavbar} className="nav-link">Qui sommes nous ?</Link>
+                                <Link to="/who-are-we" onClick={this.closeNavbar}
+                                      className="nav-link">{this.props.t("TITLE3")}</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/tarif" onClick={this.closeNavbar} className="nav-link">Tarifs</Link>
+                                <Link to="/tarif" onClick={this.closeNavbar}
+                                      className="nav-link">{this.props.t("TITLE4")}</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/preorder" onClick={this.closeNavbar} className="nav-link">Précommande</Link>
+                                <Link to="/preorder" onClick={this.closeNavbar}
+                                      className="nav-link">{this.props.t("TITLE5")}</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/contact" onClick={this.closeNavbar} className="nav-link">Contact</Link>
+                                <Link to="/contact" onClick={this.closeNavbar}
+                                      className="nav-link">{this.props.t("TITLE6")}</Link>
                             </NavItem>
                         </Nav>
                     </Collapse>
@@ -70,4 +76,6 @@ export default class MainNavbar extends React.Component {
             </div>
         );
     }
-  } 
+}
+
+export default translate("NavBar")(MainNavbar);
