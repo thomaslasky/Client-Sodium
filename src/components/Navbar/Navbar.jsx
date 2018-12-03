@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-export default class Example extends React.Component {
+export default class MainNavbar extends React.Component {
 
     constructor(props) {
         super(props);
@@ -58,7 +58,7 @@ export default class Example extends React.Component {
                                 <Link to="/tarif" onClick={this.closeNavbar} className="nav-link">Tarifs</Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink>Précommande</NavLink>
+                                <Link to="/preorder" onClick={this.closeNavbar} className="nav-link">Précommande</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/contact" onClick={this.closeNavbar} className="nav-link">Contact</Link>
