@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
 import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-} from 'reactstrap';
-import {Link} from "react-router-dom";
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from "reactstrap";
+import { Link } from "react-router-dom";
 
 export default class Example extends React.Component {
+
     constructor(props) {
         super(props);
         
@@ -48,11 +49,10 @@ export default class Example extends React.Component {
                                 <NavLink>Gallerie</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink>Technologie</NavLink>
+                               <Link to="/technology" onClick={this.closeNavbar} className="nav-link">Technologie</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/who-are-we" onClick={this.closeNavbar} className="nav-link">Qui sommes nous
-                                                                                                       ?</Link>
+                                <Link to="/who-are-we" onClick={this.closeNavbar} className="nav-link">Qui sommes nous ?</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/tarif" onClick={this.closeNavbar} className="nav-link">Tarifs</Link>
