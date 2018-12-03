@@ -1,16 +1,16 @@
-.masterContainer{
-    background-color: grey;
-    min-height: 100vh;
-    position: relative;
+.masterContainer {
+  background-color: grey;
+  min-height: 100vh;
+  position: relative;
 }
 
-.bottomRow{
-    position: absolute;
-    bottom: 0; 
-    width: 100%;
-    height: 5.6rem;
+.bottomRow {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15rem;
 }
 
-.contentWrap{
-    padding-bottom: 5.6rem;
+.contentWrap {
+  padding-bottom: 15rem;
 }
