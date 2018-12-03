@@ -46,7 +46,7 @@ export default class MainNavbar extends React.Component {
                                 <Link to="/" onClick={this.closeNavbar} className="nav-link">Xubaka</Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink>Gallerie</NavLink>
+                                <Link to="/Gallery" onClick={this.closeNavbar} className="nav-link">Galerie</Link>
                             </NavItem>
                             <NavItem>
                                <Link to="/technology" onClick={this.closeNavbar} className="nav-link">Technologie</Link>
@@ -70,4 +70,4 @@ export default class MainNavbar extends React.Component {
             </div>
         );
     }
-}
+  } 
