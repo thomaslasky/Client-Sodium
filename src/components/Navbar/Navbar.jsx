@@ -51,7 +51,6 @@ export default class Example extends React.Component {
                                 <NavLink>Technologie</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink>Qui sommes nous ?</NavLink>
                                 <Link to="/who-are-we" onClick={this.closeNavbar} className="nav-link">Qui sommes nous
                                                                                                        ?</Link>
                             </NavItem>
