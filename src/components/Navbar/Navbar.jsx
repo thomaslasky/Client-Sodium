@@ -28,14 +28,13 @@ export default class Example extends React.Component {
     }
     
     closeNavbar() {
-        if (this.state.isOpen == true) {
+        if (this.state.isOpen === true) {
             this.toggle();
         }
     }
     
     render() {
         return (
-            /*TODO space content on the bar*/
             <div>
                 <Navbar color="dark" dark expand="md">
                     <NavbarToggler onClick={this.toggle} />
@@ -53,6 +52,11 @@ export default class Example extends React.Component {
                             </NavItem>
                             <NavItem>
                                 <NavLink>Qui sommes nous ?</NavLink>
+                                <Link to="/who-are-we" onClick={this.closeNavbar} className="nav-link">Qui sommes nous
+                                                                                                       ?</Link>
+                            </NavItem>
+                            <NavItem>
+                                <Link to="/tarif" onClick={this.closeNavbar} className="nav-link">Tarif</Link>
                             </NavItem>
                             <NavItem>
                                 <NavLink>Précommande</NavLink>

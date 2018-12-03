@@ -70,7 +70,7 @@ export default function ContactPage() {
             <FormGroup>
                 <InputGroup>
                     <InputGroupAddon addonType="prepend">Téléphone</InputGroupAddon>
-                    <Input placeholder="téléphone (facultatif)" type="tel" name="tel" required />
+                    <Input placeholder="téléphone (facultatif)" type="tel" name="tel" />
                 </InputGroup>
             </FormGroup>
             <FormGroup>

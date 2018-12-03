@@ -10,8 +10,8 @@ export default class Footer extends React.Component {
             <div className="row m-0 p-2">
                 <ul className="list-unstyled col-sm-6 mb-0 text-center">
                     <li><Link to='/' className={`${style.noStyle}`}>Xubaka</Link></li>
-                    <li>Gallerie</li>
-                    <li>Valeurs</li>
+                    <li>Galerie</li>
+                    <li><Link to='/who-are-we' className={`${style.noStyle}`}>Qui sommes nous</Link></li>
                 </ul>
                 <ul className="list-unstyled col-sm-6 mb-0 text-center">
                     <li>Trouver Sodium Cycle</li>
