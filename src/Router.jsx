@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -10,8 +10,10 @@ import Contact from "./pages/Contact.page";
 import Who from "./pages/Qui.page";
 import Techno from "./pages/Techno.page";
 import Page404 from "./pages/Page404.page";
+import Tarif from './pages/Tarif.page';
 
 export default () => (
+
   <Router>
     <div>
       <Layout
@@ -22,6 +24,7 @@ export default () => (
             <Route path="/" exact component={Home} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/who-are-we" exact component={Who} />
+            <Route path="/tarif" exact component={Tarif} />
             <Route path="/technology" exact component={Techno} />
             <Route path="*" component={Page404} />
           </Switch>
