@@ -1,16 +1,15 @@
 import React from "react";
+import Style from "./ImageThumbnail.module.css";
 
 const ImageThumbnail = props => {
   return (
-    <div className="col-lg-3 col-md-4 col-xs-6 pr-1 pl-1">
-      <a href="#" className="d-block mb-2 h-100">
-        <img
-          className="img-fluid img-thumbnail"
-          src="http://placehold.it/400x300"
-          alt=""
-        />
-      </a>
-    </div>
+    <a href={props.imgSrc} className="d-block p-2 h-100 col-lg-3 col-md-6 p-0">
+      <img
+        className={`img-fluid img-thumbnail ${Style.imgThumb}`}
+        src={props.imgSrc}
+        alt=""
+      />
+    </a>
   );
 };
 
