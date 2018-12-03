@@ -51,10 +51,7 @@ export default function ContactPage() {
     }
     
     return <div className="col-md-6 m-auto" id="contain-contact">
-        <div className="mt-3">
-            <h1 className="text-center">Nous contacter</h1>
-        </div>
-        <Form className="mb-2" onSubmit={e => {
+        <Form className="mb-2 mt-5" onSubmit={e => {
             e.preventDefault();
             const email = e.target.elements.email.value;
             const telephone = e.target.elements.tel.value;
