@@ -55,7 +55,7 @@ export default class Example extends React.Component {
                                                                                                        ?</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/tarif" onClick={this.closeNavbar} className="nav-link">Tarif</Link>
+                                <Link to="/tarif" onClick={this.closeNavbar} className="nav-link">Tarifs</Link>
                             </NavItem>
                             <NavItem>
                                 <NavLink>Précommande</NavLink>
