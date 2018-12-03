@@ -16,7 +16,7 @@ function QuiPage() {
   return (
     <div>
       <div className="container-fluid">
-        <div className="row mt-2 mb-sm-4 mb-0">
+        <div className="row mt-2 mb-sm-2 mb-0">
           <div className="col-xs-12 col-md-8 offset-md-2 ">
             <CardDeck
               pix1={pix1}
@@ -28,7 +28,7 @@ function QuiPage() {
             />
           </div>
         </div>
-        <div className="row mb-sm-4 mb-2">
+        <div className="row mb-sm-2 mb-2">
           <div className="col-xs-12 col-md-8 offset-md-2 ">
             <CardTextOnly text={text3} />
           </div>
