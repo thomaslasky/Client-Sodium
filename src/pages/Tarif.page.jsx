@@ -1,20 +1,12 @@
 import React from 'react';
-import axios from 'axios';
+
+import {getElems} from '../api/Tarif.api';
+import {
+    Row
+} from 'reactstrap';
+
 import Table from '../components/ComponentsTable/componentstable';
 import Element from "../components/ComponentsTarif/componentstarif";
-
-function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-function flatReq(req, ms = 500) {
-    return Promise.all([sleep(ms), req])
-                  .then(([_, res]) => res.data.resultats);
-}
-
-function getCommands() {
-    return flatReq(axios.get(""));
-}
 
 export default class TarifPage extends React.Component {
     
@@ -26,7 +18,8 @@ export default class TarifPage extends React.Component {
     }
     
     componentDidMount() {
-        
+        getElems()
+            .then((elems) => this.setState({elems: elems}));
     }
     
     render() {
