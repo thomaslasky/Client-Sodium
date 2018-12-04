@@ -8,9 +8,8 @@ import {
     NavItem,
 } from "reactstrap";
 import {Link} from "react-router-dom";
-import {translate} from "react-translate";
 
-class MainNavbar extends React.Component {
+export default class extends React.Component {
     
     constructor(props) {
         super(props);
@@ -47,27 +46,27 @@ class MainNavbar extends React.Component {
                             </NavItem>
                             <NavItem>
                                 <Link to="/Gallery" onClick={this.closeNavbar}
-                                      className="nav-link">{this.props.t("TITLE1")}</Link>
+                                      className="nav-link">Galerie</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/technology" onClick={this.closeNavbar}
-                                      className="nav-link">{this.props.t("TITLE2")}</Link>
+                                      className="nav-link">Technologie</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/who-are-we" onClick={this.closeNavbar}
-                                      className="nav-link">{this.props.t("TITLE3")}</Link>
+                                      className="nav-link">Qui Sommes-Nous ?</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/tarif" onClick={this.closeNavbar}
-                                      className="nav-link">{this.props.t("TITLE4")}</Link>
+                                      className="nav-link">Tarif</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/preorder" onClick={this.closeNavbar}
-                                      className="nav-link">{this.props.t("TITLE5")}</Link>
+                                      className="nav-link">Précommander</Link>
                             </NavItem>
                             <NavItem>
                                 <Link to="/contact" onClick={this.closeNavbar}
-                                      className="nav-link">{this.props.t("TITLE6")}</Link>
+                                      className="nav-link">Contact</Link>
                             </NavItem>
                         </Nav>
                     </Collapse>
@@ -77,5 +76,3 @@ class MainNavbar extends React.Component {
         );
     }
 }
-
-export default translate("NavBar")(MainNavbar);

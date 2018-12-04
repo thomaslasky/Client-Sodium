@@ -1,9 +1,6 @@
 import React from 'react';
 
 import {getElems} from '../api/Tarif.api';
-import {
-    Row
-} from 'reactstrap';
 
 import Table from '../components/ComponentsTable/componentstable';
 import Element from "../components/ComponentsTarif/componentstarif";

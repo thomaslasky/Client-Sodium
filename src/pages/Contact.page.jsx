@@ -6,7 +6,6 @@ import {
     Input,
     InputGroup,
     InputGroupAddon,
-    Alert,
 } from 'reactstrap';
 import cssClasses from "./Contact.module.css";
 import axios from "axios";

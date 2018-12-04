@@ -27,7 +27,6 @@ export default () => (
                         <Route path="/" exact component={Home} />
                         <Route path="/contact" exact component={Contact} />
                         <Route path="/who-are-we" exact component={Who} />
-                        
                         <Route path="/Gallery" exact component={Gallery} />
                         <Route path="/preorder" exact component={Preorder} />
                         <Route path="/tarif" exact component={Tarif} />
