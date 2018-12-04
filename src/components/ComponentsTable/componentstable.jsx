@@ -14,16 +14,16 @@ export default function ({elems, renderElem: Element}) {
             </tr>
         </thead>
         <tbody>
-            <Element url=""
+            {/*<Element url=""
                      element="Guidon"
                      tarif="50€"
-            />
-            {/*{elems.map((elem, i) => <Element key={i}
+            />*/}
+            {elems.map((elem, i) => <Element key={i}
                                              url={elem.url}
                                              element={elem.name}
                                              tarif={elem.tarif}
             />)
-            }*/}
+            }
         </tbody>
     </Table>;
 }
