@@ -51,7 +51,11 @@ export default class RouterApp extends React.Component {
                   render={() => <Home texts={this.state.texts} />}
                 />
                 <Route path="/contact" exact component={Contact} />
-                <Route path="/who-are-we" exact component={Who} />
+                <Route
+                  path="/who-are-we"
+                  exact
+                  render={() => <Who texts={this.state.texts} />}
+                />
                 <Route path="/Gallery" exact component={Gallery} />
                 <Route path="/preorder" exact component={Preorder} />
                 <Route path="/tarif" exact component={Tarif} />
