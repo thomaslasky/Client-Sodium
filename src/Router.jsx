@@ -55,7 +55,11 @@ export default class RouterApp extends React.Component {
                 <Route path="/Gallery" exact component={Gallery} />
                 <Route path="/preorder" exact component={Preorder} />
                 <Route path="/tarif" exact component={Tarif} />
-                <Route path="/technology" exact component={Techno} />
+                <Route
+                  path="/technology"
+                  exact
+                  render={() => <Techno texts={this.state.texts} />}
+                />
                 <Route path="*" component={Page404} />
               </Switch>
             }
