@@ -16,6 +16,7 @@ import Techno from "./pages/Techno.page";
 import Page404 from "./pages/Page404.page";
 import Tarif from "./pages/Tarif.page";
 
+import { getRequest } from "../src/api/Api.manager";
 import axios from "axios";
 
 export default class RouterApp extends React.Component {
@@ -27,6 +28,9 @@ export default class RouterApp extends React.Component {
   }
 
   componentDidMount() {
+    // getRequest("http://localhost:8000/text/FR").then(res => {
+    //   this.setState({ texts: res.data.texts });
+    // });
     axios.get("http://localhost:8000/text/FR").then(res => {
       this.setState({ texts: res.data.texts });
     });

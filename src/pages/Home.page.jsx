@@ -17,17 +17,31 @@ export default class Home extends React.Component {
             <div className="col-md-6 p-0">
               <CardInfo
                 backgroundCard={`${pic1}`}
-                titleCard={this.props.texts ? this.props.texts.titrepage : ""}
-                link="https://test.fr"
-                linkName="Exemple"
+                titleCard={
+                  this.props.texts ? this.props.texts.titreHomeCard1 : ""
+                }
+                descCard={
+                  this.props.texts ? this.props.texts.descHomeCard1 : ""
+                }
+                link={this.props.texts ? this.props.texts.linkHomeCard1 : ""}
+                linkName={
+                  this.props.texts ? this.props.texts.linkNameHomeCard1 : ""
+                }
               />
             </div>
             <div className="col-md-6 p-0">
               <CardInfo
                 backgroundCard={`${pic2}`}
-                titleCard="Titre TEST"
-                link="https://test.fr"
-                linkName="Exemple"
+                titleCard={
+                  this.props.texts ? this.props.texts.titreHomeCard2 : ""
+                }
+                descCard={
+                  this.props.texts ? this.props.texts.descHomeCard2 : ""
+                }
+                link={this.props.texts ? this.props.texts.linkHomeCard2 : ""}
+                linkName={
+                  this.props.texts ? this.props.texts.linkNameHomeCard2 : ""
+                }
               />
             </div>
           </div>
