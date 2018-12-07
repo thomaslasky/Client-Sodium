@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import axios from "axios";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -17,13 +18,15 @@ import Page404 from "./pages/Page404.page";
 import Tarif from "./pages/Tarif.page";
 
 import { getRequest } from "../src/api/Api.manager";
-import axios from "axios";
 
 export default class RouterApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      texts: null
+      texts: {
+        titreHomeCard1: ""
+      },
+      images: null
     };
   }
 
@@ -33,6 +36,10 @@ export default class RouterApp extends React.Component {
     // });
     axios.get("http://localhost:8000/text/FR").then(res => {
       this.setState({ texts: res.data.texts });
+    });
+
+    axios.get("http://localhost:8000/image").then(res => {
+      this.setState({ images: res.data.images });
     });
   }
 
@@ -48,7 +55,9 @@ export default class RouterApp extends React.Component {
                 <Route
                   path="/"
                   exact
-                  render={() => <Home texts={this.state.texts} />}
+                  render={() => (
+                    <Home texts={this.state.texts} images={this.state.images} />
+                  )}
                 />
                 <Route path="/contact" exact component={Contact} />
                 <Route

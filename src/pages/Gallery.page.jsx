@@ -3,12 +3,7 @@ import ImageThumbnail from "../components/ImageThumbnail/ImageThumbnail";
 import baguetteBox from "baguettebox.js";
 import "baguettebox.js/dist/baguetteBox.css";
 
-import pix1 from "../assets/Images/Carousel/1.png";
-import pix2 from "../assets/Images/Carousel/2.png";
-
 const images = [
-  pix1,
-  pix2,
   "http://placehold.it/400x300",
   "http://placehold.it/400x300",
   "http://placehold.it/400x300",

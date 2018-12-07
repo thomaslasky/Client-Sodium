@@ -2,13 +2,7 @@ import React from "react";
 import cssClasses from "./CardInfo.module.css";
 import { Link } from "react-router-dom";
 
-export default function CardInfo({
-  backgroundCard,
-  titleCard,
-  link,
-  linkName,
-  descCard
-}) {
+function CardInfo({ backgroundCard, titleCard, link, linkName, descCard }) {
   return (
     <div
       className={`${cssClasses.card} m-2`}
@@ -21,10 +15,13 @@ export default function CardInfo({
         <p className={`${cssClasses.containCardp} col-md-10 m-auto`}>
           {descCard}
         </p>
-        <Link className="text-center d-block w-100" to={link}>
+        {/* {link} */}
+        <Link className="text-center d-block w-100" to="/">
           {linkName}
         </Link>
       </div>
     </div>
   );
 }
+
+export default CardInfo;
