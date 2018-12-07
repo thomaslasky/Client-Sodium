@@ -57,10 +57,6 @@ export default class extends React.Component {
                                       className="nav-link">Qui Sommes-Nous ?</Link>
                             </NavItem>
                             <NavItem>
-                                <Link to="/tarif" onClick={this.closeNavbar}
-                                      className="nav-link">Tarif</Link>
-                            </NavItem>
-                            <NavItem>
                                 <Link to="/preorder" onClick={this.closeNavbar}
                                       className="nav-link">Précommander</Link>
                             </NavItem>
