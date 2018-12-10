@@ -1,9 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-/*envoyer composant puis appeler fonction t dans le composant pour tester la 
-présence de valeur dans le texte*/
-
 export default function withText(BaseComponent) {
   class Text extends React.Component {
     constructor(props) {
@@ -16,7 +13,10 @@ export default function withText(BaseComponent) {
     }
 
     componentDidMount() {
-      axios.get("http://localhost:8000/text/FR").then(res => {
+      var userLang = navigator.language || navigator.userLanguage;
+      userLang = userLang.substring(0, 2).toUpperCase();
+
+      axios.get(`http://localhost:8000/text/${userLang}`).then(res => {
         this.setState({ texts: res.data.texts });
       });
     }

@@ -9,7 +9,20 @@ class Home extends React.Component {
     return (
       <div>
         <div className="p-0 w-100 col-sm-12 offset-md-1 col-md-10 mt-2">
-          <Carousel />
+          <Carousel
+            captionHomeCarousel1={this.props.t("captionHomeCarousel1")}
+            captionHomeCarousel2={this.props.t("captionHomeCarousel2")}
+            captionHomeCarousel3={this.props.t("captionHomeCarousel3")}
+            imageHomeCarousel1={
+              this.props.images ? this.props.images.imageHomeCarousel1 : ""
+            }
+            imageHomeCarousel2={
+              this.props.images ? this.props.images.imageHomeCarousel2 : ""
+            }
+            imageHomeCarousel3={
+              this.props.images ? this.props.images.imageHomeCarousel3 : ""
+            }
+          />
         </div>
         <div className="container-fluid">
           <div className="row justify-content-around">

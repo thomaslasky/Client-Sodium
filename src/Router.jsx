@@ -23,9 +23,7 @@ export default class RouterApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      texts: {
-        titreHomeCard1: ""
-      },
+      texts: "",
       images: null
     };
   }
@@ -34,9 +32,9 @@ export default class RouterApp extends React.Component {
     // getRequest("http://localhost:8000/text/FR").then(res => {
     //   this.setState({ texts: res.data.texts });
     // });
-    axios.get("http://localhost:8000/text/FR").then(res => {
-      this.setState({ texts: res.data.texts });
-    });
+    // axios.get("http://localhost:8000/text/FR").then(res => {
+    //   this.setState({ texts: res.data.texts });
+    // });
 
     axios.get("http://localhost:8000/image").then(res => {
       this.setState({ images: res.data.images });
