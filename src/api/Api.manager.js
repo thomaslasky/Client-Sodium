@@ -5,7 +5,7 @@ function sleep(ms) {
 }
 
 function flatReq(req, ms = 500) {
-  return Promise.all([sleep(ms), req]).then(([_, res]) => res.data.resultats);
+  return Promise.all([sleep(ms), req]).then(([_, res]) => res);
 }
 
 export function getRequest(url) {
