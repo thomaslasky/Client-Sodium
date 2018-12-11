@@ -15,7 +15,6 @@ import Preorder from "./pages/Preorder.page";
 import Techno from "./pages/Techno.page";
 
 import Page404 from "./pages/Page404.page";
-import Tarif from "./pages/Tarif.page";
 
 import { getRequest } from "../src/api/Api.manager";
 import Api from "./api/Api.view";
