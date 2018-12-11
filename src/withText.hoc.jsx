@@ -13,6 +13,7 @@ export default function withText(BaseComponent) {
       };
 
       this.t = this.t.bind(this);
+      this.onLangChange = this.onLangChange.bind(this);
     }
 
     componentDidMount() {
@@ -23,10 +24,16 @@ export default function withText(BaseComponent) {
         });
     }
 
-    onLangChange(lang) {
-      axios.get(`http://localhost:8000/text/${lang}`).then(res => {
-        this.setState({ texts: res.data.texts, currentLang: lang });
-      });
+    onLangChange(lang, callback) {
+      axios
+        .get(`http://localhost:8000/text/${lang}`)
+        .then(res => {
+          this.setState({ texts: res.data.texts, currentLang: lang });
+          debugger;
+        })
+        .then(() => {
+          callback(lang);
+        });
     }
 
     t(key) {
@@ -38,11 +45,13 @@ export default function withText(BaseComponent) {
     }
 
     render() {
+      debugger;
       return (
         <BaseComponent
           t={this.t}
           onLangChange={this.onLangChange}
           currentLang={this.state.currentLang}
+          texts={this.state.texts}
           {...this.props}
         />
       );

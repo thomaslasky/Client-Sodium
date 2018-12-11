@@ -18,14 +18,20 @@ import Page404 from "./pages/Page404.page";
 
 import { getRequest } from "../src/api/Api.manager";
 import Api from "./api/Api.view";
-import withText from "./withText.hoc";
 
 class RouterApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: null
+      images: null,
+      currentLanguage: ""
     };
+
+    this.onCurrentLangChange = this.onCurrentLangChange.bind(this);
+  }
+
+  onCurrentLangChange(lang) {
+    this.setState({ currentLanguage: lang });
   }
 
   componentDidMount() {
@@ -40,7 +46,7 @@ class RouterApp extends React.Component {
       <Router>
         <div>
           <Layout
-            top={<Navbar />}
+            top={<Navbar onCurrentLangChange={this.onCurrentLangChange} />}
             bottom={<Footer />}
             container={
               <Switch>
@@ -99,4 +105,4 @@ class RouterApp extends React.Component {
   }
 }
 
-export default withText(RouterApp);
+export default RouterApp;
