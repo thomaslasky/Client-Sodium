@@ -75,7 +75,7 @@ class NavbarXubaka extends React.Component {
               </NavItem>
               <NavItem>
                 <Link
-                  to="/tarif"
+                  to="/preorder"
                   onClick={this.closeNavbar}
                   className="nav-link"
                 >
@@ -84,20 +84,11 @@ class NavbarXubaka extends React.Component {
               </NavItem>
               <NavItem>
                 <Link
-                  to="/preorder"
-                  onClick={this.closeNavbar}
-                  className="nav-link"
-                >
-                  {this.props.t("textNav6")}
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link
                   to="/contact"
                   onClick={this.closeNavbar}
                   className="nav-link"
                 >
-                  {this.props.t("textNav7")}
+                  {this.props.t("textNav6")}
                 </Link>
               </NavItem>
             </Nav>
