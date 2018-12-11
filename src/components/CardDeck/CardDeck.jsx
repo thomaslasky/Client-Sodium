@@ -7,19 +7,32 @@ import {
   CardDeck,
   CardBody
 } from "reactstrap";
+import Style from "./CardDeck.module.css";
 
 const Deck = props => {
   return (
     <CardDeck>
       <Card>
-        <CardImg top width="100%" src={props.pix1} alt="Card image cap" />
+        <CardImg
+          top
+          width="100%"
+          src={props.pix1}
+          alt="Card image cap"
+          className={`${Style.img}`}
+        />
         <CardBody>
           <CardTitle>{props.title1}</CardTitle>
           <CardText>{props.text1}</CardText>
         </CardBody>
       </Card>
       <Card>
-        <CardImg top width="100%" src={props.pix2} alt="Card image cap" />
+        <CardImg
+          top
+          width="100%"
+          src={props.pix2}
+          alt="Card image cap"
+          className={`${Style.img}`}
+        />
         <CardBody>
           <CardTitle>{props.title2}</CardTitle>
           <CardText>{props.text2}</CardText>
