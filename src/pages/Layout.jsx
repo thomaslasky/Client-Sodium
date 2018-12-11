@@ -4,10 +4,10 @@ import {Row, Col} from 'reactstrap';
 import style from "./Layout.module.css";
 import FloatingButtom from '../components/FloatingButton/floatingbuttom';
 
-
 const Layout = ({top, bottom, container}) => {
     return (
         <div className={`container-fluid p-0 ${style.masterContainer}`}>
+            <FloatingButtom />
             <div className={`${style.contentWrap}`}>
                 <Row className="m-0">
                     <Col className="p-0">{top}</Col>
@@ -19,7 +19,6 @@ const Layout = ({top, bottom, container}) => {
             <Row className={`m-0 ${style.bottomRow}`}>
                 <Col className="p-0">{bottom}</Col>
             </Row>
-            <FloatingButtom />
         </div>
     );
 };
