@@ -9,6 +9,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import withText from "../../withText.hoc";
+import Style from "./Navbar.module.css";
 
 class NavbarXubaka extends React.Component {
   constructor(props) {
@@ -42,7 +43,11 @@ class NavbarXubaka extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto w-100 justify-content-around " navbar>
               <NavItem>
-                <Link to="/" onClick={this.closeNavbar} className="nav-link">
+                <Link
+                  to="/"
+                  onClick={this.closeNavbar}
+                  className={`nav-link ${Style.prometheus}`}
+                >
                   {this.props.t("textNav1")}
                 </Link>
               </NavItem>
