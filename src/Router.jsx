@@ -56,7 +56,19 @@ class RouterApp extends React.Component {
                   exact
                   render={() => <Who images={this.state.images} />}
                 />
-                <Route path="/Gallery" exact component={Gallery} />
+                <Route
+                  path="/Gallery"
+                  exact
+                  render={() => (
+                    <Gallery
+                      images={
+                        this.state.images
+                          ? this.state.images.galleryImages
+                          : null
+                      }
+                    />
+                  )}
+                />
                 <Route
                   path="/preorder"
                   exact
