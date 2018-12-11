@@ -8,7 +8,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <div className="p-0 w-100 col-sm-12 offset-md-1 col-md-10 mt-2">
+        <div className="p-0 w-100 col-sm-12 offset-md-1 col-md-10">
           <Carousel
             captionHomeCarousel1={this.props.t("captionHomeCarousel1")}
             captionHomeCarousel2={this.props.t("captionHomeCarousel2")}
