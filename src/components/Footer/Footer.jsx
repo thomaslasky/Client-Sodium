@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./Footer.module.css";
+import withText from "../../withText.hoc";
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
   render() {
     return (
       <footer className="bg-dark text-light h-100">
@@ -10,22 +11,34 @@ export default class Footer extends React.Component {
           <ul className="list-unstyled col-sm-6 mb-0 text-center my-auto">
             <li className="p-2">
               <Link to="/" className={`${style.noStyle}`}>
-                Xubaka
+                {this.props.t("textNav1")}
               </Link>
             </li>
-            <li className="p-2">Galerie</li>
             <li className="p-2">
-              <Link to="/who-are-we" className={`${style.noStyle}`}>
-                Qui sommes nous
+              <Link to="/Gallery" className={`${style.noStyle}`}>
+                {this.props.t("textNav2")}
+              </Link>
+            </li>
+            <li className="p-2">
+              <Link to="/technology" className={`${style.noStyle}`}>
+                {this.props.t("textNav3")}
               </Link>
             </li>
           </ul>
           <ul className="list-unstyled col-sm-6 mb-0 text-center my-auto">
-            <li className="p-2">Trouver Sodium Cycle</li>
-            <li className="p-2">Précommande</li>
+            <li className="p-2">
+              <Link to="/who-are-we" className={`${style.noStyle}`}>
+                {this.props.t("textNav4")}
+              </Link>
+            </li>
+            <li className="p-2">
+              <Link to="/preorder" className={`${style.noStyle}`}>
+                {this.props.t("textNav5")}
+              </Link>
+            </li>
             <li className="pt-2 pb-0">
               <Link to="/contact" className={`${style.noStyle}`}>
-                Nous contacter
+                {this.props.t("textNav6")}
               </Link>
             </li>
           </ul>
@@ -34,3 +47,5 @@ export default class Footer extends React.Component {
     );
   }
 }
+
+export default withText(Footer);

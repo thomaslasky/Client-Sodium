@@ -1,21 +1,27 @@
-import React from 'react';
+import React from "react";
 import cssClasses from "./CardInfo.module.css";
+import { Link } from "react-router-dom";
 
-export default function CardInfo({backgroundCard, titleCard, link, linkName}) {
-    return (
-        <div className={`${cssClasses.card} m-2`} style={{
-            backgroundImage: `url(${backgroundCard})`
-        }}>
-            <div>
-                <h1 className={`${cssClasses.containCardh1}`}>{`${titleCard}`}</h1>
-                <p className={`${cssClasses.containCardp} col-md-10 m-auto`}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book.
-                </p>
-                <a className={`${cssClasses.containCarda}`} href={`${link}`} target="_blank"
-                   rel="noopener noreferrer">{`${linkName}`}</a>
-            </div>
-        </div>
-    );
+function CardInfo({ backgroundCard, titleCard, link, linkName, descCard }) {
+  return (
+    <div
+      className={`${cssClasses.card} m-2`}
+      style={{
+        backgroundImage: `url(${backgroundCard})`
+      }}
+    >
+      <div>
+        <h1 className={`${cssClasses.containCardh1}`}>{`${titleCard}`}</h1>
+        <p className={`${cssClasses.containCardp} col-md-10 m-auto`}>
+          {descCard}
+        </p>
+
+        <Link className="text-center d-block w-100" to={link}>
+          {linkName}
+        </Link>
+      </div>
+    </div>
+  );
 }
+
+export default CardInfo;
