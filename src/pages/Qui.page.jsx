@@ -1,7 +1,5 @@
 import React from "react";
 import CardDeck from "../components/CardDeck/CardDeck";
-import pix1 from "../assets/Images/Perso/1.jpg";
-import pix2 from "../assets/Images/Perso/2.jpg";
 import CardTextOnly from "../components/CardTextOnly/CardTextOnly";
 
 import withText from "../withText.hoc";
