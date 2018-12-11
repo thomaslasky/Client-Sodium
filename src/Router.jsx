@@ -84,7 +84,6 @@ class RouterApp extends React.Component {
                     />
                   )}
                 />
-                <Route path="/tarif" exact component={Tarif} />
                 <Route
                   path="/technology"
                   exact
