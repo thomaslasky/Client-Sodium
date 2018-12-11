@@ -17,12 +17,35 @@ export default class extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false,
+            isOpen    : false,
+            visibility: true
         };
+        this.handleScroll = this.handleScroll.bind(this);
     }
+    
+    visibility() {
+        if (this.state.visibility === true) {
+            return "visible";
+        } else {
+            return "hidden";
+        }
+    }
+    
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+    
+    handleScroll() {
+        const obj = this;
+        obj.setState({
+                         isOpen: false,
+                         //visibility: false
+                     });
+    };
     
     render() {
         return <FloatingMenu
+            Style={`visibility: ${this.visibility()};`}
             className={`${style.fixed}`}
             slideSpeed={500}
             direction="left"
@@ -30,24 +53,25 @@ export default class extends React.Component {
             isOpen={this.state.isOpen}
         >
             <MainButton
-                iconResting={<img className="img-fluid" src={Logo} alt="Logo Sodium Cycle"/>}
-                iconActive={<img className="img-fluid" src={Logo} alt="Logo Sodium Cycle"/>}
+                Style={`visibility: ${this.visibility()};`}
+                iconResting={<img className="img-fluid" src={Logo} alt="Logo Sodium Cycle" />}
+                iconActive={<img className="img-fluid" src={Logo} alt="Logo Sodium Cycle" />}
                 backgroundColor="black"
                 onClick={() => this.setState({isOpen: !this.state.isOpen})}
                 size={65}
             />
             <ChildButton
-                Style={'overflow: hidden;'}
-                icon={<Facebook style={{fontSize: 30}}/>}
+                Style={`overflow: hidden; visibility: ${this.visibility()};`}
+                icon={<Facebook style={{fontSize: 30}} />}
                 backgroundColor="white"
-                size={40}
+                size={45}
                 onClick={() => console.log('First button clicked')}
             />
             <ChildButton
-                Style={'overflow: hidden;'}
+                Style={`overflow: hidden; visibility: ${this.visibility()};`}
                 icon={<Twitter style={{fontSize: 30}} />}
                 backgroundColor="white"
-                size={40}
+                size={45}
             />
         </FloatingMenu>;
     }
