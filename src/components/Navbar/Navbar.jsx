@@ -111,10 +111,8 @@ class NavbarXubaka extends React.Component {
                     <DropdownItem
                       key={language}
                       onClick={() => {
-                        this.props.onLangChange(
-                          language,
-                          this.props.onCurrentLangChange
-                        );
+                        this.props.onLangChange(language);
+                        this.props.onCurrentLangChange(language);
                       }}
                     >
                       {language}

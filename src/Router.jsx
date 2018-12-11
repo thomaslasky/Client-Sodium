@@ -18,20 +18,20 @@ import Page404 from "./pages/Page404.page";
 
 import { getRequest } from "../src/api/Api.manager";
 import Api from "./api/Api.view";
+import withText from "./withText.hoc";
 
 class RouterApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: null,
-      currentLanguage: ""
+      images: null
     };
 
     this.onCurrentLangChange = this.onCurrentLangChange.bind(this);
   }
 
   onCurrentLangChange(lang) {
-    this.setState({ currentLanguage: lang });
+    this.props.onLangChange(lang);
   }
 
   componentDidMount() {
@@ -53,7 +53,12 @@ class RouterApp extends React.Component {
                 <Route
                   path="/"
                   exact
-                  render={() => <Home images={this.state.images} />}
+                  render={() => (
+                    <Home
+                      images={this.state.images}
+                      requiredLanguage={currentLang}
+                    />
+                  )}
                 />
                 <Route path="/contact" exact component={Contact} />
                 <Route
@@ -105,4 +110,4 @@ class RouterApp extends React.Component {
   }
 }
 
-export default RouterApp;
+export default withText(RouterApp);

@@ -24,16 +24,11 @@ export default function withText(BaseComponent) {
         });
     }
 
-    onLangChange(lang, callback) {
-      axios
-        .get(`http://localhost:8000/text/${lang}`)
-        .then(res => {
-          this.setState({ texts: res.data.texts, currentLang: lang });
-          debugger;
-        })
-        .then(() => {
-          callback(lang);
-        });
+    onLangChange(lang) {
+      debugger;
+      axios.get(`http://localhost:8000/text/${lang}`).then(res => {
+        this.setState({ texts: res.data.texts, currentLang: lang });
+      });
     }
 
     t(key) {
@@ -45,7 +40,6 @@ export default function withText(BaseComponent) {
     }
 
     render() {
-      debugger;
       return (
         <BaseComponent
           t={this.t}
