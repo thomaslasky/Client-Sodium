@@ -19,6 +19,7 @@ import Page404 from "./pages/Page404.page";
 import {getRequest} from "../src/api/Api.manager";
 import Api from "./api/Api.view";
 import withText from "./withText.hoc";
+import Admin from './pages/ReactAdmin.page';
 
 class RouterApp extends React.Component {
     constructor(props) {
@@ -89,6 +90,7 @@ class RouterApp extends React.Component {
                                     exact
                                     render={() => <Techno images={this.state.images} />}
                                 />
+                                <Route path="/administration" component={Admin} />
                                 <Route path="*" component={Page404} />
                             </Switch>
                         }
