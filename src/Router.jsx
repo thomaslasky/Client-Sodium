@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import axios from "axios";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -16,13 +16,12 @@ import Techno from "./pages/Techno.page";
 
 import Page404 from "./pages/Page404.page";
 
-import {getRequest} from "../src/api/Api.manager";
+import { getRequest } from "../src/api/Api.manager";
 import Api from "./api/Api.view";
 import withText from "./withText.hoc";
-import Admin from './pages/ReactAdmin.page';
+import Admin from "./pages/ReactAdmin.page";
 
 class RouterApp extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -85,10 +84,21 @@ class RouterApp extends React.Component {
                         <Preorder customParts={res.data.customParts} />
                       )}
                     />
-                </div>
-            </Router>
-        );
-    }
+                  )}
+                />
+                <Route
+                  path="/technology"
+                  exact
+                  render={() => <Techno images={this.state.images} />}
+                />
+                <Route path="*" component={Page404} />
+              </Switch>
+            }
+          />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default withText(RouterApp);
