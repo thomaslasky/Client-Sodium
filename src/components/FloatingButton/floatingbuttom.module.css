@@ -1,0 +1,6 @@
+.fixed {
+	z-index: 1000;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+}
