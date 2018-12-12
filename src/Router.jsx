@@ -47,12 +47,7 @@ class RouterApp extends React.Component {
                 <Route
                   path="/"
                   exact
-                  render={() => (
-                    <Home
-                      images={this.state.images}
-                      requiredLanguage={currentLang}
-                    />
-                  )}
+                  render={() => <Home images={this.state.images} />}
                 />
                 <Route path="/contact" exact component={Contact} />
                 <Route
@@ -74,6 +69,7 @@ class RouterApp extends React.Component {
                   )}
                 />
                 <Route
+                  key={currentLang}
                   path="/preorder"
                   exact
                   render={() => (

@@ -6,22 +6,22 @@ import axios from "axios";
  */
 class TextObservable {
   constructor() {
-    this._observers = {};
+    this._observers = new Set();
   }
 
   /**
    * @param fnObserver {func} the function to call in the notifyALl
    */
   register(fnObserver) {
-    this._observers[fnObserver.name] = fnObserver;
+    this._observers.add(fnObserver);
   }
 
   unregister(fnObserver) {
-    delete this._observers[fnObserver.name];
+    this._observers.delete(fnObserver);
   }
 
   notifyAll(...args) {
-    Object.values(this._observers).forEach(fnObserver => fnObserver(...args));
+    this._observers.forEach(fnObserver => fnObserver(...args));
   }
 }
 
