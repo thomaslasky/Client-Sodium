@@ -5,11 +5,17 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import withText from "../../withText.hoc";
 import Style from "./Navbar.module.css";
+
+const availableLanguages = ["FR", "EN", "ES"];
 
 class NavbarXubaka extends React.Component {
   constructor(props) {
@@ -96,6 +102,23 @@ class NavbarXubaka extends React.Component {
                   {this.props.t("textNav6")}
                 </Link>
               </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  {this.props.currentLang}
+                </DropdownToggle>
+                <DropdownMenu right>
+                  {availableLanguages.map(language => (
+                    <DropdownItem
+                      key={language}
+                      onClick={() => {
+                        this.props.onLangChange(language);
+                      }}
+                    >
+                      {language}
+                    </DropdownItem>
+                  ))}
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
           <NavbarBrand className="d-none d-md-block" href="/">

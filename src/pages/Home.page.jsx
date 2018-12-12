@@ -5,6 +5,15 @@ import Carousel from "../components/Carousel/Carousel";
 import withText from "../withText.hoc";
 
 class Home extends React.Component {
+  componentDidUpdate(prevProps) {
+    if (
+      this.props.requiredLanguage !== prevProps.requiredLanguage &&
+      this.props.requiredLanguage
+    ) {
+      this.props.onLangChange(this.props.requiredLanguage);
+    }
+  }
+
   render() {
     return (
       <div>
