@@ -112,7 +112,6 @@ class NavbarXubaka extends React.Component {
                       key={language}
                       onClick={() => {
                         this.props.onLangChange(language);
-                        this.props.onCurrentLangChange(language);
                       }}
                     >
                       {language}

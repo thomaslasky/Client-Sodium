@@ -26,12 +26,6 @@ class RouterApp extends React.Component {
     this.state = {
       images: null
     };
-
-    this.onCurrentLangChange = this.onCurrentLangChange.bind(this);
-  }
-
-  onCurrentLangChange(lang) {
-    this.props.onLangChange(lang);
   }
 
   componentDidMount() {
@@ -46,7 +40,7 @@ class RouterApp extends React.Component {
       <Router>
         <div>
           <Layout
-            top={<Navbar onCurrentLangChange={this.onCurrentLangChange} />}
+            top={<Navbar />}
             bottom={<Footer />}
             container={
               <Switch>
