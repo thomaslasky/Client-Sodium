@@ -42,7 +42,7 @@ export default class Preorder extends React.Component {
                         draggable      : true
                     });
                 }
-            })
+            });
     }
     
     render() {
