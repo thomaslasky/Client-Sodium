@@ -73,7 +73,6 @@ function PreorderPersonalInfoForm(props) {
           type="textarea"
           id="message"
           rows="8"
-          required
           placeholder={props.t("textPlaceFormMessage")}
           name="message"
         />
