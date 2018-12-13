@@ -40,66 +40,74 @@ class RouterApp extends React.Component {
         return (
             <Router>
                 <div>
-                    <Layout
-                        top={<Navbar />}
-                        bottom={<Footer />}
-                        container={
-                            <Switch>
-                                <Route
-                                    path="/"
-                                    exact
-                                    render={() => <Home images={this.state.images} />}
+                    <Switch>
+                        <Route
+                            path="/admscrct"
+                            exact
+                            render={() => <Admin />}
+                        />
+                        <Route
+                            path="*"
+                            exact
+                            render={() =>
+                                <Layout
+                                    top={<Navbar />}
+                                    bottom={<Footer />}
+                                    container={
+                                        <Switch>
+                                            <Route
+                                                path="/"
+                                                exact
+                                                render={() => <Home images={this.state.images} />}
+                                            />
+                                            <Route path="/contact" exact component={Contact} />
+                                            <Route
+                                                path="/who-are-we"
+                                                exact
+                                                render={() => <Who images={this.state.images} />}
+                                            />
+                                            <Route
+                                                path="/Gallery"
+                                                exact
+                                                render={() => (
+                                                    <Gallery
+                                                        images={
+                                                            this.state.images
+                                                                ? this.state.images.galleryImages
+                                                                : null
+                                                        }
+                                                    />
+                                                )}
+                                            />
+                                            <Route
+                                                key={currentLang}
+                                                path="/preorder"
+                                                exact
+                                                render={() => (
+                                                    <Api
+                                                        req={() =>
+                                                            getRequest(
+                                                                `http://localhost:8000/custompart/${currentLang}`
+                                                            )
+                                                        }
+                                                        renderSuccess={res => (
+                                                            <Preorder customParts={res.data.customParts} />
+                                                        )}
+                                                    />
+                                                )}
+                                            />
+                                            <Route
+                                                path="/technology"
+                                                exact
+                                                render={() => <Techno images={this.state.images} />}
+                                            />
+                                            <Route path="*" component={Page404} />
+                                        </Switch>
+                                    }
                                 />
-                                <Route path="/contact" exact component={Contact} />
-                                <Route
-                                    path="/who-are-we"
-                                    exact
-                                    render={() => <Who images={this.state.images} />}
-                                />
-                                <Route
-                                    path="/Gallery"
-                                    exact
-                                    render={() => (
-                                        <Gallery
-                                            images={
-                                                this.state.images
-                                                    ? this.state.images.galleryImages
-                                                    : null
-                                            }
-                                        />
-                                    )}
-                                />
-                                <Route
-                                    key={currentLang}
-                                    path="/preorder"
-                                    exact
-                                    render={() => (
-                                        <Api
-                                            req={() =>
-                                                getRequest(
-                                                    `http://localhost:8000/custompart/${currentLang}`
-                                                )
-                                            }
-                                            renderSuccess={res => (
-                                                <Preorder customParts={res.data.customParts} />
-                                            )}
-                                        />
-                                    )}
-                                />
-                                <Route
-                                    path="/technology"
-                                    exact
-                                    render={() => <Techno images={this.state.images} />}
-                                />
-                                <Route
-                                    path="/admscrct"
-                                    exact
-                                    render={() => <Admin />}
-                                />
-                                <Route path="*" component={Page404} />
-                            </Switch>
-                        }
-                    />
+                            }
+                        />
+                    </Switch>
                 </div>
             </Router>
         );
