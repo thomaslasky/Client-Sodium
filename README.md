@@ -4,6 +4,10 @@ La partie client représente le site vitrine présentant le projet SC.
 
 # Getting Started
 
+Etape 1 :
+
+
+
 Afin que le site fonctionne vous devez disposer d'un serveur **Apache** à jour ainsi que la version 7.1 de PHP (au minimum).
 PHPMyAdmin doit être installer ainsi que MySQL afin de pouvoir gérer la base de données en localhost.
 NodeJS doit être installer afin de pouvoir lancer le client serveur via la commande **npm start**.
