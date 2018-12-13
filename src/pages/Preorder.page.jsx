@@ -74,7 +74,7 @@ export default class Preorder extends React.Component {
                             <PreorderPersonalInfoForm />
                         </div>
                     </div>
-                    <Button className="m-auto d-block">Submit</Button>
+                    <Button className="ml-auto mr-auto d-block mb-2">Submit</Button>
                 </Form>
                 <ToastContainer
                     position="bottom-right"
