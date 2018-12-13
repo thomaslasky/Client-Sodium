@@ -24,7 +24,6 @@ class CarouselHome extends Component {
   }
 
   componentDidMount() {
-    debugger;
     this.setState();
   }
 
@@ -84,7 +83,6 @@ class CarouselHome extends Component {
         caption: this.props.captionHomeCarousel3
       }
     ];
-    debugger;
     if (items[0].src == null || items[1].src == null || items[2].src == null) {
       return null;
     }

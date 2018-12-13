@@ -54,8 +54,8 @@ export default class extends React.Component {
         >
             <MainButton
                 Style={`visibility: ${this.visibility()};`}
-                iconResting={<img className="img-fluid" src={Logo} alt="Logo Sodium Cycle" />}
-                iconActive={<img className="img-fluid" src={Logo} alt="Logo Sodium Cycle" />}
+                iconResting={<img className={`${style.logo}`} src={Logo} alt="Logo Sodium Cycle" />}
+                iconActive={<img className={`${style.logo}`} src={Logo} alt="Logo Sodium Cycle" />}
                 backgroundColor="black"
                 onClick={() => this.setState({isOpen: !this.state.isOpen})}
                 size={65}
