@@ -10,9 +10,10 @@ function CardInfo({ backgroundCard, titleCard, link, linkName, descCard }) {
         backgroundImage: `url(${backgroundCard})`
       }}
     >
-      <div>
+      <div className="h-100">
         <h1 className={`${cssClasses.containCardh1}`}>{`${titleCard}`}</h1>
-        <p className={`${cssClasses.containCardp} col-md-10 m-auto`}>
+
+        <p className={`${cssClasses.containCardp} col-md-10 mx-auto`}>
           {descCard}
         </p>
 
