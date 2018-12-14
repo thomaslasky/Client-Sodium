@@ -7,7 +7,8 @@ import {
 } from 'react-floating-button-menu';
 import {
     FaFacebookF as Facebook,
-    FaTwitter as Twitter
+    FaLinkedinIn as Linkedin,
+    FaInstagram as Instagram
 } from 'react-icons/fa';
 import Logo from '../../assets/Images/Logo/logo.png';
 import style from './floatingbuttom.module.css';
@@ -69,9 +70,16 @@ export default class extends React.Component {
             />
             <ChildButton
                 Style={`overflow: hidden; visibility: ${this.visibility()};`}
-                icon={<Twitter style={{fontSize: 30}} />}
+                icon={<Linkedin style={{fontSize: 30}} />}
                 backgroundColor="white"
                 size={45}
+            />
+            <ChildButton
+                Style={`overflow: hidden; visibility: ${this.visibility()};`}
+                icon={<Instagram style={{fontSize: 30}} />}
+                backgroundColor="white"
+                size={45}
+                link="#"
             />
         </FloatingMenu>;
     }
