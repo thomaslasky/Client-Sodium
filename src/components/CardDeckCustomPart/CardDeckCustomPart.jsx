@@ -37,7 +37,7 @@ export default class CardDeckCustomPart extends React.Component {
                       className="mr-1"
                     />
                     {option.name}{" "}
-                    {option.price ? "(+ " + option.price + ")" : null}
+                    {option.price ? "(+ " + option.price + " €)" : null}
                   </label>
                 </li>
               ))}
