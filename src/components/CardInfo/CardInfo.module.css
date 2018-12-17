@@ -13,8 +13,16 @@
 .containCardp {
   text-align: center;
   border-radius: 10px;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.6);
+  /* color: black;
+  background-color: rgba(255, 255, 255, 0.6); */
+  color: white;
+  font-size: large;
+  font-weight: 450;
+}
+
+.containCardLink {
+  font-size: large;
+  font-weight: 450;
 }
 
 .containCardText {

@@ -15,7 +15,12 @@ function CardInfo({ backgroundCard, titleCard, link, linkName, descCard }) {
         <div className={`${cssClasses.containCardText} col-md-10 offset-md-1`}>
           <p className={`${cssClasses.containCardp}`}>{descCard}</p>
 
-          <Link className="text-center d-block w-100" to={link}>
+          <Link
+            className={`${
+              cssClasses.containCardLink
+            } text-center d-block w-100`}
+            to={link}
+          >
             {linkName}
           </Link>
         </div>
