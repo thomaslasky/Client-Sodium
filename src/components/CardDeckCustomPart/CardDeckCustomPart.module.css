@@ -1,0 +1,31 @@
+.imgCustomPart {
+  min-width: 33%;
+  max-width: 40%;
+  /* border-radius: 5%; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgOption {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.imgOption:hover {
+  z-index: 2000;
+  border-radius: 10px;
+  background: rgba(105, 105, 105, 0.7);
+  transform: scale(4);
+}
+
+.miniContainer {
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+}
+
+.groupe {
+  max-height: 300px;
+}

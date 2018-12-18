@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Prometheus";
+  font-style: normal;
+  font-weight: 50;
+  src: local("Prometheus"),
+    url("../../assets/Fonts/PROMETHEUS.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+.prometheus {
+  font-family: "Prometheus";
+  text-transform: uppercase;
+}
+
+/* .dropItem {
+  background-color: #263238;
+} */
